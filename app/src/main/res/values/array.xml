@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nfc_tech_types">
+        <item>Automatic</item>
+        <item>NDEF</item>
+        <item>NFC-A (MIFARE)</item>
+        <item>NFC-B</item>
+        <item>NFC-F (FeliCa)</item>
+        <item>NFC-V</item>
+    </string-array>
+</resources>

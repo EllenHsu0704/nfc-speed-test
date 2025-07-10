@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 標籤形式顯示區域 -->
+        <TextView
+            android:id="@+id/tvTechList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- 在原有佈局中添加 -->
+        <Spinner
+            android:id="@+id/spinnerTechType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:entries="@array/nfc_tech_types"/>
+
+        <!-- 讀取速度顯示區域 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NFC 讀取/寫入速度測試"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="讀取速度結果:"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/tvResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="等待 NFC 讀取/寫入操作..."
+                android:textColor="@android:color/black"
+                android:padding="8dp"/>
+        </ScrollView>
+
+        <!-- 寫入數據輸入區域 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="寫入數據:"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etWriteData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入要寫入NFC標籤的數據"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnWrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="寫入數據到NFC標籤"
+            android:background="@color/teal_200"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- NFC狀態顯示 -->
+        <TextView
+            android:id="@+id/tvNfcStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NFC狀態: 未檢測到NFC設備"
+            android:textColor="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+</ScrollView>
